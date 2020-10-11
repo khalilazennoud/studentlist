@@ -9,12 +9,9 @@ pipeline {
       }
       stage('Docker Build') {
          steps {
-            sh(script: 'docker images -a')
             sh(script: """
                cd simple_api/
-               docker images -a
                docker build -t khalil10/studentlistimage .
-               docker images -a
                cd ..
             """)
          }
