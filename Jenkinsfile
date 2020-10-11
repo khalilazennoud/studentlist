@@ -16,7 +16,18 @@ pipeline {
             """)
          }
       }
-
+stage('Push container'){
+          steps{
+              dir("$WORKSPACE/azure-vote"){
+                 script{
+                    docker.withRegistry('https://index.docker.io/v1/ ', 'dockerhub') {
+                    def image = docker.build('khalil10/studentlistrepo:latest')
+                    image.push()
+                    }
+              }
+              }
+          }
+}
 
 
 
