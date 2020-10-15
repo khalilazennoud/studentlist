@@ -9,7 +9,7 @@
       shell: git clone https://github.com/khalilazennoud/studentlist.git
 
     - name: Go to the placement of the dokcer-compose.yml
-      shell: cd student-list
+      shell: cd studentlist
 
     # docker network
     - name: crete docker network to interconnect containers
