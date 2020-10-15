@@ -6,7 +6,7 @@
 #       shell: sudo rm -r student-list/ simple_api/
 
     - name: clone the git repo
-      shell: git clone https://github.com/iliassanati/student-list.git
+      shell: git clone https://github.com/khalilazennoud/studentlist.git
 
     - name: Go to the placement of the dokcer-compose.yml
       shell: cd student-list
