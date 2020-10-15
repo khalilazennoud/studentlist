@@ -24,10 +24,10 @@
       docker_container:
         name: api
         hostname: api
-        image: registry.local.com:5000/simple_api
+        image: khalil10/studentlistimage
         state: started
         volumes:
-          - /home/iliassanati/student-list/simple_api/student_age.json:/data/student_age.json
+          - /home/ansibleadmin/student-list/simple_api/student_age.json:/data/student_age.json
         ports:
           - 5000:5000
         networks:
@@ -43,7 +43,7 @@
         image: php:7.2-apache
         state: started
         volumes:
-          - /home/iliassanati/student-list/website:/var/www/html
+          - /home/ansibleadmin/student-list/website:/var/www/html
         env:
           USERNAME: 'toto'
           PASSWORD: 'python'
