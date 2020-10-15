@@ -24,7 +24,7 @@
       docker_container:
         name: api
         hostname: api
-        image: khalil10/studentlistimage
+        image: khalil10/studentlistrepo
         state: started
         volumes:
           - /home/ansibleadmin/student-list/simple_api/student_age.json:/data/student_age.json
