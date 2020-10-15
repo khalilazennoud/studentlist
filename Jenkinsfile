@@ -30,7 +30,7 @@ stage('Push container'){
 }
    stage(' app Deploy'){
       steps{
-   ansiblePlaybook credentialsId: 'appserverr', installation: 'ansible', inventory: 'dev.inv', playbook: 'playbook.yml'
+   ansiblePlaybook credentialsId: 'appserverr', disableHostKeyChecking: true, installation: 'ansible', inventory: 'dev.inv', playbook: 'playbook.yml'
 }
    }
 
